@@ -1,3 +1,4 @@
+/* colors */
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -8,10 +9,11 @@
 }
 
 /*
-    2. Remove default margin
+    2. Remove default margin and padding
   */
 * {
   margin: 0;
+  padding: 0;
 }
 
 /*
@@ -65,4 +67,181 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+/* --------------- */
+/* general styling */
+/* --------------- */
+body {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(1deg, 0%, 57%);
+  transition: 0.5s;
+}
+
+a:hover {
+  color: hsl(42deg, 100%, 50%);
+}
+
+h2 {
+  color: hsl(1deg, 0%, 57%);
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+p {
+  color: hsl(1deg, 0%, 40%);
+}
+
+/* --------------- */
+/* utility classes */
+/* --------------- */
+.flex {
+  display: flex;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+
+.section {
+  width: 100%;
+  margin: 6rem 0;
+  padding: 0 7rem;
+}
+
+@media (max-width: 52em) {
+  .section {
+    margin: 4rem 0;
+    padding: 0 4rem;
+  }
+}
+/* --------------- */
+/*    reusables */
+/* --------------- */
+hr {
+  width: 7rem;
+  border: 0;
+  border-top: 6px solid hsl(42deg, 100%, 50%);
+  border-radius: 5px;
+  background-color: hsl(42deg, 100%, 50%);
+}
+
+.btn-classic {
+  cursor: pointer;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  background-color: hsl(42deg, 100%, 50%);
+  color: hsl(0deg, 0%, 100%);
+  transition: transform ease-in 0.2s;
+}
+
+.btn-classic:hover {
+  transform: scale(1.1);
+}
+
+/* header */
+header {
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.logo {
+  margin: 2rem;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.primary-navigation {
+  list-style: none;
+  gap: 1rem;
+}
+.primary-navigation li a {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+@media (max-width: 35em) {
+  .primary-navigation {
+    position: fixed;
+    inset: 0 0 0 30%;
+    gap: 2rem;
+    z-index: 1000;
+    flex-direction: column;
+    padding: min(30vh, 10rem) 3rem;
+    transform: translateX(100%);
+    transition: transform 350ms ease-in-out;
+    background: hsla(0deg, 0%, 100%, 0.9);
+  }
+  .primary-navigation[data-visible=true] {
+    transform: translateX(0);
+  }
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    top: 2rem;
+    right: 2rem;
+    border: none;
+    background: none;
+  }
+}
+/* section hero */
+.hero {
+  display: flex;
+  min-height: 80vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/images/bg-hero-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero .hero-content {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero .hero-content h1 {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 3rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.hero .hero-content h3 {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 52em) {
+  .hero {
+    min-height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/images/bg-hero-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+/* section about */
+.about-content {
+  flex-direction: column;
+  align-items: center;
+}
+.about-content p {
+  margin-top: 3rem;
 }/*# sourceMappingURL=style.css.map */

@@ -4,8 +4,102 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <title>MJ-Service</title>
+    <script src="main.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header class="flex">
+      <div class="logo">
+        <a href="index.html">LOGO</a>
+      </div>
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars fa-lg"></i>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav>
+        <ul
+          id="primary-navigation"
+          data-visible="false"
+          class="primary-navigation flex"
+        >
+          <li>
+            <a href="index.html">O nas</a>
+          </li>
+          <li>
+            <a href="index.html">Oferta</a>
+          </li>
+          <li>
+            <a href="index.html">Realizacje</a>
+          </li>
+          <li>
+            <a href="index.html">Praca</a>
+          </li>
+          <li>
+            <a href="index.html">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content flex">
+        <h1>MJ-SERVICE</h1>
+        <hr />
+        <h3>Dostarczamy energię w budownictwie przemysłowym</h3>
+        <button class="btn-classic">Dowiedz się więcej</button>
+      </div>
+    </section>
+
+    <section class="section about">
+      <div class="about-content flex">
+        <h2>O NAS</h2>
+        <hr />
+        <p>
+          <strong>Spółka MJ Service</strong> jest obecna na rynku usług
+          budownictwa przemysłowego od 2018 roku. Stale się rozwijając nasze
+          usługi świadczymy w projektach budowlanych w całej Europie.<br />
+          Podstawę oferty stanowią kompleksowe usługi w zakresie instalacji
+          elektrycznych i automatyki dla sektora Centrów Danych, który jest
+          obecnie najprężniej rosnącym segmentem rynku. Jako podwykonawcy
+          uczestniczymy w projektach potentatów branży IT: Google, Facebook,
+          Microsoft.<br />
+          <br />
+          Działamy również w dziedzinie leasingu pracowniczego, rekrutując i
+          dostarczając wysoko wykwalifikowaną kadrę niższego i wyższego
+          szczebla.<br />
+          <br />
+          W razie potrzeby możemy zapewnić naszym klientom pełną obsługę
+          logistyczną, dbając o transport i zakwaterowanie pracowników, obsługę
+          administracyjno – kadrową, kompleksowe usługi BHP, pomoc w realizacji
+          szkoleń podnoszących kwalifikacje.<br />
+          <br />
+          Dążymy do ciągłego rozwoju i wychodząc naprzeciw oczekiwaniom rynkowym
+          poszukujemy nowych projektów, w których chcielibyśmy uczestniczyć.<br />
+          <br />
+          Zapraszamy do współpracy.
+        </p>
+      </div>
+      <button class="btn-classic">Skontaktuj się z nami</button>
+    </section>
+  </body>
 </html>

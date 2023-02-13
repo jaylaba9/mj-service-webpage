@@ -1,3 +1,9 @@
+/* colors */
+$clr-white: hsl(0, 0%, 100%);
+$clr-orange: hsl(42, 100%, 50%);
+$clr-gray: hsl(1, 0%, 57%);
+$clr-dark-gray: hsl(1, 0%, 40%);
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -7,10 +13,11 @@
   box-sizing: border-box;
 }
 /*
-    2. Remove default margin
+    2. Remove default margin and padding
   */
 * {
   margin: 0;
+  padding: 0;
 }
 /*
     3. Allow percentage-based heights in the application
@@ -59,4 +66,196 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+/* --------------- */
+/* general styling */
+/* --------------- */
+body {
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: $clr-gray;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: $clr-orange;
+}
+
+h2 {
+  color: $clr-gray;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+p {
+  color: $clr-dark-gray;
+}
+
+/* --------------- */
+/* utility classes */
+/* --------------- */
+.flex {
+  display: flex;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+
+.section {
+  width: 100%;
+  margin: 6rem 0;
+  padding: 0 7rem;
+}
+
+@media (max-width: 52em) {
+  .section {
+    margin: 4rem 0;
+    padding: 0 4rem;
+  }
+}
+
+/* --------------- */
+/*    reusables */
+/* --------------- */
+hr {
+  width: 7rem;
+  border: 0;
+  border-top: 6px solid $clr-orange;
+  border-radius: 5px;
+  background-color: $clr-orange;
+}
+
+.btn-classic {
+  cursor: pointer;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  background-color: $clr-orange;
+  color: $clr-white;
+  transition: transform ease-in 0.2s;
+}
+
+.btn-classic:hover {
+  transform: scale(1.1);
+}
+
+/* header */
+header {
+  justify-content: space-between;
+  align-items: center;
+  background-color: $clr-white;
+}
+
+.logo {
+  margin: 2rem;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.primary-navigation {
+  list-style: none;
+  gap: 1rem;
+
+  li a {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 35em) {
+  .primary-navigation {
+    position: fixed;
+    inset: 0 0 0 30%;
+    gap: 2rem;
+    z-index: 1000;
+    flex-direction: column;
+    padding: min(30vh, 10rem) 3rem;
+    // background: steelblue;
+    transform: translateX(100%);
+    transition: transform 350ms ease-in-out;
+    background: hsl(0 0% 100% / 0.9);
+    // backdrop-filter: blur(1rem);
+  }
+
+  .primary-navigation[data-visible='true'] {
+    transform: translateX(0);
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    top: 2rem;
+    right: 2rem;
+    border: none;
+    background: none;
+  }
+}
+
+/* section hero */
+.hero {
+  display: flex;
+  min-height: 80vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(assets/images/bg-hero-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .hero-content {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      color: $clr-white;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    h3 {
+      color: $clr-white;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media (max-width: 52em) {
+  .hero {
+    min-height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(assets/images/bg-hero-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+/* section about */
+.about-content {
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    margin-top: 3rem;
+  }
 }
