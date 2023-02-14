@@ -94,6 +94,11 @@ h2 {
   letter-spacing: 2px;
 }
 
+h3 {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
 p {
   color: hsl(1deg, 0%, 40%);
 }
@@ -103,6 +108,10 @@ p {
 /* --------------- */
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
 }
 
 .sr-only {
@@ -115,6 +124,8 @@ p {
 }
 
 .section {
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   margin: 6rem 0;
   padding: 0 7rem;
@@ -129,12 +140,20 @@ p {
 /* --------------- */
 /*    reusables */
 /* --------------- */
-hr {
+.orange-divider {
   width: 7rem;
   border: 0;
   border-top: 6px solid hsl(42deg, 100%, 50%);
   border-radius: 5px;
   background-color: hsl(42deg, 100%, 50%);
+}
+
+.classic-divider {
+  width: 80%;
+  background-color: hsl(1deg, 0%, 75%);
+  border: 0;
+  border-top: 1px solid hsl(1deg, 0%, 75%);
+  margin: 0 auto;
 }
 
 .btn-classic {
@@ -222,10 +241,11 @@ header {
   letter-spacing: 2px;
   font-weight: 700;
 }
-.hero .hero-content h3 {
+.hero .hero-content h4 {
   color: hsl(0deg, 0%, 100%);
   font-size: 1rem;
   margin-top: 1rem;
+  align-self: center;
 }
 
 @media (max-width: 52em) {
@@ -240,8 +260,30 @@ header {
 /* section about */
 .about-content {
   flex-direction: column;
-  align-items: center;
-}
-.about-content p {
+  align-items: flex-start;
   margin-top: 3rem;
+}
+
+/* section offer */
+.offer-content {
+  margin-top: 3rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.offer-content ul {
+  color: hsl(1deg, 0%, 40%);
+}
+.offer-content ul li {
+  list-style-position: inside;
+  padding-left: 0.5rem;
+}
+
+@media (min-width: 60em) {
+  .offer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .offer-content .offer:not(:first-child) {
+    margin-top: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -3,6 +3,7 @@ $clr-white: hsl(0, 0%, 100%);
 $clr-orange: hsl(42, 100%, 50%);
 $clr-gray: hsl(1, 0%, 57%);
 $clr-dark-gray: hsl(1, 0%, 40%);
+$clr-light-gray: hsl(1, 0%, 75%);
 
 /*
   1. Use a more-intuitive box-sizing model.
@@ -73,7 +74,7 @@ h6 {
 /* --------------- */
 body {
   font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
   overflow-x: hidden;
 }
@@ -94,6 +95,11 @@ h2 {
   letter-spacing: 2px;
 }
 
+h3 {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
 p {
   color: $clr-dark-gray;
 }
@@ -103,6 +109,10 @@ p {
 /* --------------- */
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
 }
 
 .sr-only {
@@ -115,6 +125,8 @@ p {
 }
 
 .section {
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   margin: 6rem 0;
   padding: 0 7rem;
@@ -130,12 +142,20 @@ p {
 /* --------------- */
 /*    reusables */
 /* --------------- */
-hr {
+.orange-divider {
   width: 7rem;
   border: 0;
   border-top: 6px solid $clr-orange;
   border-radius: 5px;
   background-color: $clr-orange;
+}
+
+.classic-divider {
+  width: 80%;
+  background-color: $clr-light-gray;
+  border: 0;
+  border-top: 1px solid $clr-light-gray;
+  margin: 0 auto;
 }
 
 .btn-classic {
@@ -193,7 +213,7 @@ header {
     // backdrop-filter: blur(1rem);
   }
 
-  .primary-navigation[data-visible='true'] {
+  .primary-navigation[data-visible="true"] {
     transform: translateX(0);
   }
 
@@ -231,10 +251,11 @@ header {
       font-weight: 700;
     }
 
-    h3 {
+    h4 {
       color: $clr-white;
       font-size: 1rem;
       margin-top: 1rem;
+      align-self: center;
     }
   }
 }
@@ -253,9 +274,40 @@ header {
 /* section about */
 .about-content {
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 3rem;
+}
 
-  p {
-    margin-top: 3rem;
+/* section offer */
+.offer-content {
+  margin-top: 3rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  ul {
+    color: $clr-dark-gray;
+
+    li {
+      list-style-position: inside;
+      padding-left: 0.5rem;
+    }
+  }
+}
+
+@media (min-width: 60em) {
+  // .section.offering {
+  //   padding: 0 4rem;
+  // }
+  .offer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    .offer:not(:first-child) {
+      margin-top: 0;
+    }
+
+    // .offer:first-child {
+    //   padding-right: 2rem;
+    // }
   }
 }
