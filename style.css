@@ -286,4 +286,48 @@ header {
   .offer-content .offer:not(:first-child) {
     margin-top: 0;
   }
+}
+/* section values */
+.cooperation {
+  grid-template-columns: 1fr;
+  margin-bottom: 2rem;
+}
+.cooperation img {
+  justify-self: center;
+  align-self: center;
+}
+
+.values-list {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: center;
+  grid-auto-rows: minmax(100px, auto);
+}
+.values-list .value {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.values-list .value p {
+  margin-top: 1rem;
+}
+.values-list .value h4 {
+  color: hsl(42deg, 100%, 50%);
+}
+
+@media (min-width: 35em) {
+  .cooperation {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .values-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 60em) {
+  .values-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }/*# sourceMappingURL=style.css.map */
