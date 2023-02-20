@@ -99,6 +99,11 @@ h3 {
   letter-spacing: 2px;
 }
 
+h5 {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 400;
+}
+
 p {
   color: hsl(1deg, 0%, 40%);
 }
@@ -169,6 +174,12 @@ p {
 
 .btn-classic:hover {
   transform: scale(1.1);
+}
+
+.center {
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 /* header */
@@ -329,5 +340,197 @@ header {
 @media (min-width: 60em) {
   .values-list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+/* section jobs */
+.jobs {
+  padding: 0 2rem;
+}
+.jobs .jobs-content {
+  margin-top: 3rem;
+  grid-template-columns: 1fr;
+  align-items: start;
+  line-height: 1.7;
+  gap: 2rem;
+}
+.jobs .jobs-content .job-card {
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid hsl(1deg, 0%, 40%);
+  border-radius: 0.75rem;
+  padding: 1rem 2rem;
+}
+.jobs .jobs-content .job-card ul li {
+  padding-left: 0;
+}
+
+@media (min-width: 52em) {
+  .jobs .jobs-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 60em) {
+  .jobs {
+    padding: 0 4rem;
+  }
+}
+@media (min-width: 68em) {
+  .jobs {
+    padding: 0 7rem;
+  }
+}
+/* section projects */
+.projects-content {
+  margin-top: 3rem;
+  grid-template-columns: 1fr;
+  width: 100%;
+  gap: 1rem;
+}
+.projects-content .accordion .accordion-btn {
+  cursor: pointer;
+  width: 100%;
+  padding: 0.5rem;
+  text-align: left;
+  background-color: hsl(1deg, 0%, 83%);
+  border: 1px solid hsl(1deg, 0%, 83%);
+  outline: none;
+  color: hsl(1deg, 0%, 25%);
+}
+.projects-content .accordion .accordion-btn:hover,
+.projects-content .accordion .active {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(1deg, 0%, 57%);
+}
+.projects-content .accordion .accordion-btn:after {
+  content: "+";
+  font-size: 1rem;
+  color: hsl(1deg, 0%, 40%);
+  float: right;
+  border: none;
+  outline: none;
+  margin-right: 0.5rem;
+}
+.projects-content .accordion .active:after {
+  content: "-";
+  color: hsl(0deg, 0%, 100%);
+}
+.projects-content .accordion .accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid hsl(1deg, 0%, 75%);
+  border-top: none;
+  transition: max-height 0.5s ease-in-out;
+}
+.projects-content .accordion .accordion-panel ul {
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+.projects-content .accordion .accordion-panel ul li {
+  list-style-position: inside;
+}
+
+/* section contact */
+.contact-content {
+  margin-top: 3rem;
+  flex-direction: column;
+}
+.contact-content form {
+  color: hsl(1deg, 0%, 57%);
+}
+.contact-content form input,
+.contact-content form textarea {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border: 1px solid hsl(1deg, 0%, 75%);
+  border-radius: 0.25rem;
+}
+.contact-content form button {
+  margin: 0;
+}
+.contact-content .company-info {
+  margin-top: 3rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.contact-content .company-info .contact-details {
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.contact-content .company-info .contact-details i {
+  color: hsl(1deg, 0%, 40%);
+}
+
+@media (min-width: 35em) {
+  .contact-content .company-info {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 52em) {
+  .contact-content {
+    flex-direction: row-reverse;
+    gap: 2rem;
+  }
+  .contact-content form {
+    width: 70%;
+  }
+  .contact-content .company-info {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1.5rem;
+    width: 30%;
+  }
+}
+@media (min-width: 68em) {
+  .contact-content form {
+    width: 50%;
+  }
+  .contact-content .company-info {
+    width: 50%;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4rem;
+  }
+}
+/* FOOTER */
+footer {
+  background-color: hsl(1deg, 0%, 40%);
+  padding: 0.25rem;
+}
+footer .partners {
+  width: 90%;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  background-color: hsl(1deg, 0%, 25%);
+}
+footer .partners .partners-list {
+  margin-top: 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+footer .partners .partners-list img {
+  max-width: 250px;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease-in-out;
+}
+footer .partners .partners-list img:hover {
+  filter: grayscale(0);
+}
+
+@media (min-width: 52em) {
+  footer .partners .partners-list {
+    margin-top: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
   }
 }/*# sourceMappingURL=style.css.map */
