@@ -76,7 +76,7 @@ h6 {
 /* --------------- */
 body {
   font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
   overflow-x: hidden;
 }
@@ -226,7 +226,7 @@ header {
     // backdrop-filter: blur(1rem);
   }
 
-  .primary-navigation[data-visible='true'] {
+  .primary-navigation[data-visible="true"] {
     transform: translateX(0);
   }
 
@@ -424,6 +424,7 @@ header {
   grid-template-columns: 1fr;
   width: 100%;
   gap: 1rem;
+  max-width: 700px;
 
   .accordion {
     .accordion-btn {
@@ -446,7 +447,7 @@ header {
     }
 
     .accordion-btn:after {
-      content: '+';
+      content: "+";
       font-size: 1rem;
       color: $clr-dark-gray;
       float: right;
@@ -456,7 +457,7 @@ header {
     }
 
     .active:after {
-      content: '-';
+      content: "-";
       color: $clr-white;
     }
 
@@ -478,6 +479,12 @@ header {
         }
       }
     }
+  }
+}
+
+@media (min-width: 52em) {
+  .projects-content {
+    grid-template-columns: 1fr 1fr;
   }
 }
 

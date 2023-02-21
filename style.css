@@ -385,6 +385,7 @@ header {
   grid-template-columns: 1fr;
   width: 100%;
   gap: 1rem;
+  max-width: 700px;
 }
 .projects-content .accordion .accordion-btn {
   cursor: pointer;
@@ -431,6 +432,11 @@ header {
   list-style-position: inside;
 }
 
+@media (min-width: 52em) {
+  .projects-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 /* section contact */
 .contact-content {
   margin-top: 3rem;
