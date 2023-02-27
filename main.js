@@ -28,7 +28,7 @@ let prevScrollPos = window.pageYOffset;
 window.onscroll = function () {
   let currentScrollPos = window.pageYOffset;
 
-  if (window.scrollY === 0) {
+  if (window.scrollY <= 0) {
     header.style.top = 0;
   }
 
