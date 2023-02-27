@@ -203,6 +203,7 @@ header {
   align-items: center;
   background-color: $clr-white;
   transition: top 0.4s ease-in-out;
+  z-index: 100;
 
   button {
     i {
