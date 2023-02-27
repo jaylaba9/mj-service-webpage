@@ -18,21 +18,29 @@ const scrollJobs = document.querySelector('.scroll-into-jobs');
 const scrollProjects = document.querySelector('.scroll-into-projects');
 const scrollContact = document.querySelectorAll('.scroll-into-contact');
 
+const sectionHero = document.querySelector('.hero');
 const sectionAbout = document.querySelector('.about');
 const sectionOffering = document.querySelector('.offering');
 const sectionJobs = document.querySelector('.jobs');
 const sectionProjects = document.querySelector('.projects');
 const sectionContact = document.querySelector('.contact');
 
+const isInViewport = function (element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+};
+
 let prevScrollPos = window.pageYOffset;
 window.onscroll = function () {
   let currentScrollPos = window.pageYOffset;
 
-  if (window.scrollY <= 0) {
-    header.style.top = 0;
-  }
-
-  if (prevScrollPos > currentScrollPos) {
+  if (prevScrollPos > currentScrollPos || isInViewport(sectionHero)) {
     header.style.top = 0;
   } else {
     header.style.top = '-200px';
