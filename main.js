@@ -28,6 +28,10 @@ let prevScrollPos = window.pageYOffset;
 window.onscroll = function () {
   let currentScrollPos = window.pageYOffset;
 
+  if (window.scrollY === 0) {
+    header.style.top = 0;
+  }
+
   if (prevScrollPos > currentScrollPos) {
     header.style.top = 0;
   } else {
