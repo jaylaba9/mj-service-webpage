@@ -1,4 +1,4 @@
-# mj-service-webpage
+# MJ-SERVICE
 
 Preview is available at https://jaylaba9-mjservice.netlify.app.
 
