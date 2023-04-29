@@ -1,6 +1,6 @@
 # mj-service-webpage
 
-Preview is available at jaylaba9-mjservice.netlify.app.
+Preview is available at https://jaylaba9-mjservice.netlify.app.
 
 Made with:
 - HTML + CSS/SCSS
