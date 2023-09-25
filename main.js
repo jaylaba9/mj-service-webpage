@@ -7,6 +7,7 @@ const toggleNavIcon = document.querySelector('.mobile-nav-toggle i');
 
 const accBtn = document.querySelectorAll('.accordion-btn');
 
+const contactForm = document.getElementById('contact-form');
 const privacyModal = document.querySelector('.modal-container');
 const policy = document.querySelectorAll('.policy');
 const btnClosePrivacy = document.querySelector('.btn-close-modal');
@@ -25,6 +26,49 @@ const sectionJobs = document.querySelector('.jobs');
 const sectionProjects = document.querySelector('.projects');
 const sectionContact = document.querySelector('.contact');
 
+/* ------- EVENT HANDLERS------- */
+
+// contact form handler
+emailjs.init('ljmMqFBC_IAa-DIBt');
+contactForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const serviceID = 'service_1g46xj3';
+  const templateID = 'template_kogorzk';
+
+  emailjs.sendForm(serviceID, templateID, this).then(
+    (response) => {
+      console.log('SUCCESS', response.status, response.text);
+      alert('Twoja wiadomość została wysłana. Dziękujemy za kontakt.');
+    },
+    (error) => {
+      console.log('FAILED', error);
+      alert('Nie udało się wysłać wiadomości. Spróbuj ponownie.');
+    }
+  );
+
+  document.getElementById('name').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('phone').value = '';
+  document.getElementById('message').value = '';
+});
+
+// modal window handler
+policy.forEach((el) =>
+  el.addEventListener('click', () => {
+    privacyModal.classList.remove('hidden');
+    modalOverlay.classList.remove('hidden');
+  })
+);
+
+btnClosePrivacy.addEventListener('click', () => {
+  privacyModal.classList.add('hidden');
+  modalOverlay.classList.add('hidden');
+});
+
+/* ------- OTHER FUNCTIONS ------- */
+
+// checks if an element is in viewport
 const isInViewport = function (element) {
   const rect = element.getBoundingClientRect();
   return (
@@ -36,6 +80,7 @@ const isInViewport = function (element) {
   );
 };
 
+// hiding header on scrolling down, showing when scrolling up
 let prevScrollPos = window.pageYOffset;
 window.onscroll = function () {
   let currentScrollPos = window.pageYOffset;
@@ -57,20 +102,8 @@ const hideSidebar = function () {
 };
 
 const hideHeader = function () {
-  header.style.top = '-999px';
+  header.style.top = '-200px';
 };
-
-policy.forEach((el) =>
-  el.addEventListener('click', () => {
-    privacyModal.classList.remove('hidden');
-    modalOverlay.classList.remove('hidden');
-  })
-);
-
-btnClosePrivacy.addEventListener('click', () => {
-  privacyModal.classList.add('hidden');
-  modalOverlay.classList.add('hidden');
-});
 
 /* ------- NAVIGATION BAR ------- */
 toggleNav.addEventListener('click', () => {
