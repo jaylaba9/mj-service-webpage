@@ -551,7 +551,15 @@ header {
         padding: 0.5rem;
         li {
           list-style-position: inside;
+
+          span {
+            font-size: 1.25rem;
+          }
         }
+      }
+
+      .project-info {
+        margin-left: 1.75rem;
       }
     }
   }
@@ -720,51 +728,19 @@ header {
 /* FOOTER */
 footer {
   background-color: $clr-dark-gray;
-  padding: 0.25rem;
-  flex-direction: column;
+  padding: 2rem;
+  flex-direction: row-reverse;
   align-items: center;
-
-  .partners {
-    width: 90%;
-    margin: 1rem auto;
-    padding: 0.5rem;
-    background-color: $clr-very-dark-gray;
-
-    .partners-list {
-      margin-top: 1rem;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-
-      img {
-        max-width: 250px;
-        filter: grayscale(100%);
-        transition: filter 0.5s ease-in-out;
-      }
-
-      img:hover {
-        filter: grayscale(0);
-      }
-    }
-  }
+  justify-content: space-between;
 
   a {
-    color: $clr-light-gray;
+    color: $clr-white;
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
-}
 
-@media (min-width: 52em) {
-  footer {
-    .partners {
-      .partners-list {
-        margin-top: 0;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-      }
-    }
+  span {
+    font-size: 1rem;
+    color: $clr-white;
   }
 }

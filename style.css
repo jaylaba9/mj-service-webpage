@@ -82,16 +82,16 @@ body {
 a {
   cursor: pointer;
   text-decoration: none;
-  color: hsl(1deg, 0%, 57%);
+  color: hsl(1, 0%, 57%);
   transition: 0.5s;
 }
 
 a:hover {
-  color: hsl(42deg, 100%, 50%);
+  color: hsl(42, 100%, 50%);
 }
 
 h2 {
-  color: hsl(1deg, 0%, 57%);
+  color: hsl(1, 0%, 57%);
   font-size: 2.5rem;
   letter-spacing: 2px;
 }
@@ -102,12 +102,12 @@ h3 {
 }
 
 h5 {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-weight: 400;
 }
 
 p {
-  color: hsl(1deg, 0%, 40%);
+  color: hsl(1, 0%, 40%);
 }
 
 /* --------------- */
@@ -154,16 +154,16 @@ p {
 .orange-divider {
   width: 7rem;
   border: 0;
-  border-top: 6px solid hsl(42deg, 100%, 50%);
+  border-top: 6px solid hsl(42, 100%, 50%);
   border-radius: 5px;
-  background-color: hsl(42deg, 100%, 50%);
+  background-color: hsl(42, 100%, 50%);
 }
 
 .classic-divider {
   width: 80%;
-  background-color: hsl(1deg, 0%, 75%);
+  background-color: hsl(1, 0%, 75%);
   border: 0;
-  border-top: 1px solid hsl(1deg, 0%, 75%);
+  border-top: 1px solid hsl(1, 0%, 75%);
   margin: 0 auto;
 }
 
@@ -173,8 +173,8 @@ p {
   padding: 0.5rem;
   border-radius: 0.75rem;
   border: none;
-  background-color: hsl(42deg, 100%, 50%);
-  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(42, 100%, 50%);
+  color: hsl(0, 0%, 100%);
   transition: transform ease-in 0.2s;
 }
 
@@ -193,11 +193,11 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  border-bottom: 2px solid hsl(1deg, 0%, 75%);
+  border-bottom: 2px solid hsl(1, 0%, 75%);
   opacity: 0.9;
   justify-content: space-between;
   align-items: center;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   transition: top 0.4s ease-in-out;
   z-index: 100;
 }
@@ -230,7 +230,7 @@ header button i {
     font-size: 1.125rem;
   }
   .primary-navigation li a:hover {
-    color: hsl(42deg, 100%, 50%);
+    color: hsl(42, 100%, 50%);
   }
 }
 @media (max-width: 35em) {
@@ -244,7 +244,7 @@ header button i {
     margin-right: 0;
     transform: translateX(100%);
     transition: transform 350ms ease-in-out;
-    background: hsl(0deg, 0%, 100%);
+    background: hsl(0, 0%, 100%);
     opacity: 1;
   }
   .primary-navigation li a {
@@ -280,13 +280,13 @@ header button i {
   align-items: center;
 }
 .hero .hero-content h1 {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-size: 3rem;
   letter-spacing: 2px;
   font-weight: 700;
 }
 .hero .hero-content h4 {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-size: 1rem;
   margin-top: 1rem;
   align-self: center;
@@ -316,7 +316,7 @@ header button i {
   align-items: start;
 }
 .offer-content ul {
-  color: hsl(1deg, 0%, 40%);
+  color: hsl(1, 0%, 40%);
 }
 .offer-content ul li {
   list-style-position: inside;
@@ -369,7 +369,7 @@ header button i {
   margin-top: 1rem;
 }
 .values-list .value h4 {
-  color: hsl(42deg, 100%, 50%);
+  color: hsl(42, 100%, 50%);
 }
 
 @media (min-width: 35em) {
@@ -400,7 +400,7 @@ header button i {
 .jobs .jobs-content .job-card {
   flex-direction: column;
   gap: 1rem;
-  border: 1px solid hsl(1deg, 0%, 40%);
+  border: 1px solid hsl(1, 0%, 40%);
   border-radius: 0.75rem;
   padding: 1rem 2rem;
 }
@@ -443,20 +443,20 @@ header button i {
   width: 100%;
   padding: 0.5rem;
   text-align: left;
-  background-color: hsl(1deg, 0%, 83%);
-  border: 1px solid hsl(1deg, 0%, 83%);
+  background-color: hsl(1, 0%, 83%);
+  border: 1px solid hsl(1, 0%, 83%);
   outline: none;
-  color: hsl(1deg, 0%, 25%);
+  color: hsl(1, 0%, 25%);
 }
 .projects-content .accordion .accordion-btn:hover,
 .projects-content .accordion .active {
-  color: hsl(0deg, 0%, 100%);
-  background-color: hsl(1deg, 0%, 57%);
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(1, 0%, 57%);
 }
 .projects-content .accordion .accordion-btn:after {
   content: "+";
   font-size: 1rem;
-  color: hsl(1deg, 0%, 40%);
+  color: hsl(1, 0%, 40%);
   float: right;
   border: none;
   outline: none;
@@ -464,13 +464,13 @@ header button i {
 }
 .projects-content .accordion .active:after {
   content: "-";
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
 }
 .projects-content .accordion .accordion-panel {
   max-height: 0;
   overflow: hidden;
   width: 100%;
-  border: 1px solid hsl(1deg, 0%, 75%);
+  border: 1px solid hsl(1, 0%, 75%);
   border-top: none;
   transition: max-height 0.5s ease-in-out;
 }
@@ -481,6 +481,12 @@ header button i {
 }
 .projects-content .accordion .accordion-panel ul li {
   list-style-position: inside;
+}
+.projects-content .accordion .accordion-panel ul li span {
+  font-size: 1.25rem;
+}
+.projects-content .accordion .accordion-panel .project-info {
+  margin-left: 1.75rem;
 }
 
 @media (min-width: 52em) {
@@ -494,13 +500,13 @@ header button i {
   flex-direction: column;
 }
 .contact-content form {
-  color: hsl(1deg, 0%, 57%);
+  color: hsl(1, 0%, 57%);
 }
 .contact-content form input,
 .contact-content form textarea {
   width: 100%;
   margin-bottom: 0.5rem;
-  border: 1px solid hsl(1deg, 0%, 75%);
+  border: 1px solid hsl(1, 0%, 75%);
   border-radius: 0.25rem;
 }
 .contact-content form button {
@@ -544,7 +550,7 @@ header button i {
   width: 80%;
   height: 80%;
   flex-direction: column;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   border: 1px solid black;
   overflow-y: auto;
 }
@@ -576,7 +582,7 @@ header button i {
   gap: 1rem;
 }
 .contact-content .company-info .contact-details i {
-  color: hsl(1deg, 0%, 40%);
+  color: hsl(1, 0%, 40%);
 }
 
 @media (min-width: 35em) {
@@ -616,43 +622,18 @@ header button i {
 }
 /* FOOTER */
 footer {
-  background-color: hsl(1deg, 0%, 40%);
-  padding: 0.25rem;
-  flex-direction: column;
+  background-color: hsl(1, 0%, 40%);
+  padding: 2rem;
+  flex-direction: row-reverse;
   align-items: center;
-}
-footer .partners {
-  width: 90%;
-  margin: 1rem auto;
-  padding: 0.5rem;
-  background-color: hsl(1deg, 0%, 25%);
-}
-footer .partners .partners-list {
-  margin-top: 1rem;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-footer .partners .partners-list img {
-  max-width: 250px;
-  filter: grayscale(100%);
-  transition: filter 0.5s ease-in-out;
-}
-footer .partners .partners-list img:hover {
-  filter: grayscale(0);
+  justify-content: space-between;
 }
 footer a {
-  color: hsl(1deg, 0%, 75%);
+  color: hsl(0, 0%, 100%);
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
-
-@media (min-width: 52em) {
-  footer .partners .partners-list {
-    margin-top: 0;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-  }
+footer span {
+  font-size: 1rem;
+  color: hsl(0, 0%, 100%);
 }/*# sourceMappingURL=style.css.map */
